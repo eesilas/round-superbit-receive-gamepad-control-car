@@ -45,6 +45,20 @@ radio.onReceivedNumber(function (receivedNumber) {
         SuperBit.enMotors.M3,
         -90
         )
+    } else if (receivedNumber == 1) {
+        SuperBit.MotorRunDual(
+        SuperBit.enMotors.M1,
+        45,
+        SuperBit.enMotors.M3,
+        80
+        )
+    } else if (receivedNumber == 2) {
+        SuperBit.MotorRunDual(
+        SuperBit.enMotors.M1,
+        80,
+        SuperBit.enMotors.M3,
+        45
+        )
     } else {
         basic.showIcon(IconNames.Heart)
     }
