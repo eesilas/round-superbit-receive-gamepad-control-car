@@ -6,27 +6,34 @@ radio.onReceivedNumber(function (receivedNumber) {
         SuperBit.enMotors.M3,
         90
         )
+        basic.showArrow(ArrowNames.North)
     } else if (receivedNumber == 4) {
-        SuperBit.MotorRunDual(
-        SuperBit.enMotors.M1,
-        45,
-        SuperBit.enMotors.M3,
-        -45
-        )
-    } else if (receivedNumber == 10) {
         SuperBit.MotorRunDual(
         SuperBit.enMotors.M1,
         -45,
         SuperBit.enMotors.M3,
         45
         )
-    } else if (receivedNumber == 8) {
+        basic.showArrow(ArrowNames.East)
+        basic.pause(5000)
+    } else if (receivedNumber == 10) {
         SuperBit.MotorRunDual(
         SuperBit.enMotors.M1,
-        -90,
+        45,
         SuperBit.enMotors.M3,
-        -90
+        -45
         )
+        basic.showArrow(ArrowNames.West)
+        basic.pause(5000)
+    } else if (receivedNumber == 4) {
+        SuperBit.MotorStopAll()
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # . # .
+            . # # # .
+            . . . . .
+            `)
     } else {
         basic.showIcon(IconNames.Heart)
     }
