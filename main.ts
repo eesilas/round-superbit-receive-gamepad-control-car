@@ -2,9 +2,9 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 12) {
         SuperBit.MotorRunDual(
         SuperBit.enMotors.M1,
-        90,
+        135,
         SuperBit.enMotors.M3,
-        90
+        135
         )
         basic.showArrow(ArrowNames.North)
     } else if (receivedNumber == 4) {
@@ -23,7 +23,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         -45
         )
         basic.showArrow(ArrowNames.East)
-    } else if (receivedNumber == 3) {
+    } else if (receivedNumber == 14) {
         SuperBit.MotorRunDual(
         SuperBit.enMotors.M1,
         0,
